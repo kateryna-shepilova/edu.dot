@@ -1,0 +1,98 @@
+@use "./layout/variables" as vars;
+
+.reviews-section {
+  position: relative;
+  padding: 40px 0 140px;
+  @media (min-width: vars.$pc) {
+    padding: 56px 0 220px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100%;
+    display: block;
+    background: #FFF8E1;
+    z-index: -1;
+  }
+  .top-holder {
+    margin-bottom: 24px;
+    @media (min-width: vars.$tablet) {
+      margin-bottom: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+  }
+  .section-title {
+    @media (min-width: vars.$laptop) {
+      margin: 0;
+    }
+  }
+}
+
+.reviews {
+  height: 100%;
+  .swiper-wrapper {
+    height: 100%;
+  }
+  .swiper-arrows {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+.review {
+  background: vars.$white;
+  border-radius: 16px;
+  padding: 32px;
+  height: auto;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  .image {
+    width: 74px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .name {
+    margin: 0;
+  }
+  .course {
+    margin-bottom: 8px;
+  }
+}
+
+.rating {
+  display: flex;
+  gap: 3px;
+  .icon-star {
+    display: inline-block;
+    font-size: 16px;
+    &.checked {
+      color: vars.$orange;
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: vars.$blue;
+  position: static;
+  margin: 20px 0;
+}

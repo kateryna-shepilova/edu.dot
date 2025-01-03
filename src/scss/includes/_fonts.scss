@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?tsumyz');
+  src: url('../fonts/icomoon.eot?tsumyz#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?tsumyz') format('truetype'),
+  url('../fonts/icomoon.woff?tsumyz') format('woff'),
+  url('../fonts/icomoon.svg?tsumyz#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  &:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.icon-facebook:before {
+  content: "\e900";
+}
+
+.icon-instagram:before {
+  content: "\e905";
+}
+
+.icon-play:before {
+  content: "\e906";
+}
+
+.icon-quote:before {
+  content: "\e907";
+}
+
+.icon-star:before {
+  content: "\e908";
+}
+
+.icon-twitter:before {
+  content: "\e909";
+}

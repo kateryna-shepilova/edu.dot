@@ -1,0 +1,50 @@
+@use "./layout/variables" as vars;
+
+.cta-section {
+  position: relative;
+  margin-top: -120px;
+  &:before {
+    content: '';
+    background: vars.$white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    display: block;
+    top: 120px;
+    height: calc(100% - 120px);
+  }
+  .holder {
+    color: vars.$white;
+    background: vars.$blue;
+    max-width: 915px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    @media (min-width: vars.$tablet) {
+      border-radius: 140px;
+    }
+    @media (min-width: vars.$laptop) {
+      border-radius: 200px;
+    }
+  }
+  .section-title {
+    width: 80%;
+    margin: 0 auto 24px;
+    @media (min-width: vars.$pc) {
+      margin-bottom: 48px;
+    }
+  }
+  .btn {
+    color: vars.$black;
+    background: vars.$white;
+    border-color: vars.$white;
+    &:hover {
+      color: vars.$white;
+      background: transparent;
+    }
+  }
+}

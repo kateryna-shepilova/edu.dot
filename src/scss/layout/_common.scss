@@ -1,0 +1,144 @@
+@use "./layout/variables" as vars;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: vars.$base-font;
+  font-size: vars.$font-size;
+  color: vars.$black;
+  background-color: vars.$white;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-x: hidden;
+  &.menu-active {
+    overflow: hidden;
+  }
+}
+
+.page-holder {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255, 210, 63, 0.25) 23%, rgba(96, 139, 255, 0.25) 45%, rgba(255, 210, 63, 0.25) 64%);
+}
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0 0 24px;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+h1,
+.h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+  @media (min-width: vars.$laptop) {
+    font-size: 46px;
+    margin-bottom: 24px;
+  }
+  @media (min-width: vars.$pc) {
+    font-size: 64px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 30px;
+  @media (min-width: vars.$laptop) {
+    font-size: 38px;
+  }
+  @media (min-width: vars.$pc) {
+    font-size: 45px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  @media (min-width: vars.$laptop) {
+    font-size: 40px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 30px;
+}
+
+h5,
+.h5 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  @media (min-width: vars.$laptop) {
+    font-size: 20px;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+p {
+
+}
+
+a {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img {
+  height: 100%;
+  max-width: 100%;
+}
+
+.orange-text {
+  color: vars.$orange;
+}
+
+blockquote {
+  border-top: 1px solid rgba(vars.$black, 0.11);
+  padding-top: 16px;
+  margin: 16px 0 0;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    font-size: 24px;
+  }
+}
