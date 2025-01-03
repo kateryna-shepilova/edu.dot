@@ -63,7 +63,10 @@ export const processImages = gulp.series(copySVG, convertToWebP);
 export const processHTML = () =>
     gulp.src(paths.html)
         .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
-        .pipe(gulp.dest(paths.htmlDist))
+        .pipe(gulp.dest((file) => {
+            // Place `index.html` in root, others in `dist`
+            return file.basename === 'index.html' ? './' : paths.htmlDist;
+        }))
         .pipe(bs.stream());
 
 // Minify and Concatenate JS
@@ -79,7 +82,7 @@ export const processJS = () =>
 export const serve = () => {
     bs.init({
         server: {
-            baseDir: './dist',
+            baseDir: './',
         },
         port: 3000,
         notify: false,
