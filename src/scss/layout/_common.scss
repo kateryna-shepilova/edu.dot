@@ -1,4 +1,4 @@
-@use "./layout/variables" as vars;
+@use "./layout/variables" as *;
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -11,10 +11,10 @@ body {
 }
 
 body {
-  font-family: vars.$base-font;
-  font-size: vars.$font-size;
-  color: vars.$black;
-  background-color: vars.$white;
+  font-family: $base-font;
+  font-size: $font-size;
+  color: $black;
+  background-color: $white;
   line-height: 1.5;
   font-weight: 400;
   overflow-x: hidden;
@@ -60,11 +60,11 @@ h1,
 .h1 {
   font-size: 38px;
   margin-bottom: 12px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 46px;
     margin-bottom: 24px;
   }
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     font-size: 64px;
   }
 }
@@ -72,10 +72,10 @@ h1,
 h2,
 .h2 {
   font-size: 30px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 38px;
   }
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     font-size: 45px;
   }
 }
@@ -84,7 +84,7 @@ h3,
 .h3 {
   font-size: 26px;
   margin-bottom: 12px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 40px;
   }
 }
@@ -98,7 +98,7 @@ h5,
 .h5 {
   font-size: 16px;
   margin-bottom: 10px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 20px;
   }
 }
@@ -126,11 +126,11 @@ img {
 }
 
 .orange-text {
-  color: vars.$orange;
+  color: $orange;
 }
 
 blockquote {
-  border-top: 1px solid rgba(vars.$black, 0.11);
+  border-top: 1px solid rgba($black, 0.11);
   padding-top: 16px;
   margin: 16px 0 0;
   position: relative;

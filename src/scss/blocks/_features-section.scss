@@ -1,16 +1,16 @@
-@use "./layout/variables" as vars;
+@use "./layout/variables" as *;
 
 .features-section {
   position: relative;
   padding: 40px 0;
   margin-bottom: 40px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     padding: 56px 0;
   }
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     gap: 84px;
     margin-bottom: 100px;
   }
@@ -29,20 +29,20 @@
 }
 
 .feature-item {
-  background: vars.$white;
+  background: $white;
   border-radius: 10px;
   padding: 24px;
   margin-bottom: 40px;
-  @media (min-width: vars.$tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     align-items: center;
     gap: 24px;
   }
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     width: calc(50% - 20px);
     margin-bottom: 0;
   }
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     width: calc(50% - 42px);
   }
   &:last-child {
@@ -54,7 +54,7 @@
     overflow: hidden;
     border-radius: 50%;
     margin-bottom: 16px;
-    @media (min-width: vars.$tablet) {
+    @media (min-width: $tablet) {
       margin-bottom: 0;
     }
     img {
@@ -70,13 +70,13 @@
   .title {
     font-size: 20px;
     margin-bottom: 8px;
-    @media (min-width: vars.$laptop) {
+    @media (min-width: $laptop) {
       font-size: 24px;
     }
   }
   p {
     margin-bottom: 12px;
-    @media (min-width: vars.$laptop) {
+    @media (min-width: $laptop) {
       margin-bottom: 24px;
     }
     &:last-child {

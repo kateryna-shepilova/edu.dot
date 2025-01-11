@@ -1,9 +1,9 @@
-@use "./layout/variables" as vars;
+@use "./layout/variables" as *;
 
 .reviews-section {
   position: relative;
   padding: 40px 0 140px;
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     padding: 56px 0 220px;
   }
   &:before {
@@ -20,7 +20,7 @@
   }
   .top-holder {
     margin-bottom: 24px;
-    @media (min-width: vars.$tablet) {
+    @media (min-width: $tablet) {
       margin-bottom: 48px;
       display: flex;
       align-items: center;
@@ -29,7 +29,7 @@
     }
   }
   .section-title {
-    @media (min-width: vars.$laptop) {
+    @media (min-width: $laptop) {
       margin: 0;
     }
   }
@@ -47,7 +47,7 @@
 }
 
 .review {
-  background: vars.$white;
+  background: $white;
   border-radius: 16px;
   padding: 32px;
   height: auto;
@@ -85,14 +85,14 @@
     display: inline-block;
     font-size: 16px;
     &.checked {
-      color: vars.$orange;
+      color: $orange;
     }
   }
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: vars.$blue;
+  color: $blue;
   position: static;
   margin: 20px 0;
 }

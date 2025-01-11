@@ -1,14 +1,14 @@
-@use "./layout/variables" as vars;
+@use "./layout/variables" as *;
 
 .footer {
   padding-top: 40px;
   padding-bottom: 40px;
-  background: vars.$white;
-  @media (min-width: vars.$laptop) {
+  background: $white;
+  @media (min-width: $laptop) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     padding-top: 100px;
     padding-bottom: 100px;
   }
@@ -16,21 +16,21 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    @media (min-width: vars.$laptop) {
+    @media (min-width: $laptop) {
       gap: 100px;
     }
   }
   .col {
     flex: 1 1 calc(50% - 15px);
-    @media (min-width: vars.$tablet) {
+    @media (min-width: $tablet) {
       flex: 1 1 calc(25% - 23px);
     }
-    @media (min-width: vars.$laptop) {
+    @media (min-width: $laptop) {
       flex: 1 1 calc(20% - 80px);
     }
     &:first-child {
       flex: 1 1 100%;
-      @media (min-width: vars.$laptop) {
+      @media (min-width: $laptop) {
         flex: 1 1 calc(20% - 80px);
       }
     }
@@ -52,7 +52,7 @@
   flex-wrap: wrap;
   gap: 16px;
   a {
-    border: 1px solid vars.$black;
+    border: 1px solid $black;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -67,8 +67,8 @@
       font-size: 14px;
     }
     &:hover {
-      border-color: vars.$orange;
-      color: vars.$orange;
+      border-color: $orange;
+      color: $orange;
     }
   }
 }
@@ -84,11 +84,11 @@
     }
   }
   a {
-    color: rgba(vars.$black, 0.6);
+    color: rgba($black, 0.6);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     &:hover {
-      color: vars.$black;
+      color: $black;
     }
   }
 }
