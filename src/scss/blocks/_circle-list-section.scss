@@ -70,7 +70,7 @@
       font-size: 16px;
     }
     &:last-child {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
     .icon {
       background: $orange;
@@ -82,7 +82,8 @@
       @media (min-width: $laptop) {
         width: 70px;
         height: 70px;
-        padding: 19px;      margin-bottom: 20px;
+        padding: 19px;
+        margin-bottom: 20px;
       }
       img {
         display: block;
